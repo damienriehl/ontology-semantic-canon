@@ -1,0 +1,517 @@
+@base <https://ontology.catholicos.catholic/> .
+@prefix : <https://ontology.catholicos.catholic/> .
+@prefix dc: <http://purl.org/dc/elements/1.1/> .
+@prefix dcterms: <http://purl.org/dc/terms/> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix prov: <http://www.w3.org/ns/prov#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix skos: <http://www.w3.org/2004/02/skos/core#> .
+@prefix time: <http://www.w3.org/2006/time#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+# New classes (19): proposal only; maintainers apply accepted changes in WebProtégé.
+
+<R2PCCd0Cf7TiP6IxGyrz7Ta> a owl:Class ;
+    rdfs:label "Deontic Modality" ;
+    rdfs:subClassOf <RClhbl4E1TJp9LygIXewIhn> ;
+    skos:altLabel "Normative Modality",
+        "Deontic Status",
+        "Normative Force",
+        "Deontic Modality"@en-gb,
+        "Modalidad deóntica"@es-es,
+        "Modalidad deóntica"@es-mx,
+        "Modalité déontique"@fr-fr,
+        "Deontische Modalität"@de-de,
+        "Modalidade deôntica"@pt-br,
+        "מודליות דאונטית"@he-il,
+        "कर्तव्यपरक विधा"@hi-in,
+        "義務様相"@ja-jp,
+        "道义模态"@zh-cn,
+        "Modalitas deontica"@la,
+        "Modalità deontica"@it ;
+    skos:definition "A deontic modality is the normative force a norm gives an action: whether the norm requires it, forbids it, allows it, recommends it, or discourages it." ;
+    skos:example "The faithful are bound to participate in the Mass on Sundays (CIC c. 1247), an obligation; the Church earnestly recommends burial (CIC c. 1176 § 3), a recommendation.",
+        "In \"the employer must give 60 days' notice,\" must expresses an obligation; may expresses a permission, and should expresses a recommendation." ;
+    skos:note "Proposed 2026-11-08 by the Agents' Lawful Good gap registry (proposal deontic-completion-2026-11-08); the same local name is proposed to FOLIO so both ontologies stay aligned." .
+
+<RjMjN3NkaSRnPZw8vlwlcY> a owl:Class ;
+    rdfs:label "Recommendation" ;
+    rdfs:subClassOf <R2PCCd0Cf7TiP6IxGyrz7Ta> ;
+    skos:altLabel "Recommended Act",
+        "Encouraged Act",
+        "Hortatory Provision",
+        "Precatory Provision",
+        "Advisory Norm",
+        "Recommendation"@en-gb,
+        "Recomendación"@es-es,
+        "Recomendación"@es-mx,
+        "Recommandation"@fr-fr,
+        "Empfehlung"@de-de,
+        "Recomendação"@pt-br,
+        "המלצה"@he-il,
+        "अनुशंसा"@hi-in,
+        "推奨"@ja-jp,
+        "建议"@zh-cn,
+        "Commendatio"@la,
+        "Raccomandazione"@it ;
+    skos:definition "A recommendation is a normative statement that an action is advisable or praiseworthy without making it obligatory. Departing from a recommendation is not a violation, though it may carry evaluative, reputational, or moral significance." ;
+    skos:example "The Church earnestly recommends that the pious custom of burying the bodies of the deceased be observed (CIC c. 1176 § 3).",
+        "In consecrated life, the faithful profess the evangelical counsels of chastity, poverty, and obedience by vows or other sacred bonds (CIC c. 573 § 2); the Church commends these counsels without requiring them of all the faithful.",
+        "Agency guidance documents describe recommended, nonbinding practices with words such as \"should.\"",
+        "A testator's precatory words (\"it is my wish that\") express a recommendation that does not bind the executor." ;
+    skos:note "Proposed 2026-11-08 by the Agents' Lawful Good gap registry (proposal deontic-completion-2026-11-08); the same local name is proposed to FOLIO so both ontologies stay aligned." .
+
+<R29CRZT3JnJ8AmB5EFfSTp5> a owl:Class ;
+    rdfs:label "Discouragement" ;
+    rdfs:subClassOf <R2PCCd0Cf7TiP6IxGyrz7Ta> ;
+    skos:altLabel "Discouraged Act",
+        "Disfavored Act",
+        "Disfavor",
+        "Discouragement"@en-gb,
+        "Desaconsejo"@es-es,
+        "Desaconsejo"@es-mx,
+        "Acte déconseillé"@fr-fr,
+        "Abraten"@de-de,
+        "Desaconselhamento"@pt-br,
+        "אי-המלצה"@he-il,
+        "हतोत्साहन"@hi-in,
+        "非推奨"@ja-jp,
+        "不鼓励"@zh-cn,
+        "Dissuasio"@la,
+        "Dissuasione"@it ;
+    skos:definition "A discouragement is a normative statement that an action is inadvisable or disfavored without prohibiting it. Performing a discouraged action is not a violation, though the norm-giver counsels against it." ;
+    skos:example "The Church does not prohibit cremation unless it is chosen for reasons contrary to Christian doctrine (CIC c. 1176 § 3); it permits cremation while recommending burial.",
+        "Courts disfavor forfeitures and construe forfeiture provisions strictly against the party seeking them.",
+        "Many courts treat motions for reconsideration as disfavored: a party may file one, but the court expects a strong reason." ;
+    skos:note "Proposed 2026-11-08 by the Agents' Lawful Good gap registry (proposal deontic-completion-2026-11-08); the same local name is proposed to FOLIO so both ontologies stay aligned." .
+
+<R2TPb1dgPO42w8tLZkDdqCP> a owl:Class ;
+    rdfs:label "Normative Position" ;
+    rdfs:subClassOf <RClhbl4E1TJp9LygIXewIhn> ;
+    skos:altLabel "Jural Relation",
+        "Hohfeldian Position",
+        "Normative Position"@en-gb,
+        "Posición normativa"@es-es,
+        "Posición normativa"@es-mx,
+        "Position normative"@fr-fr,
+        "Rechtsposition"@de-de,
+        "Posição jurídica"@pt-br,
+        "עמדה נורמטיבית"@he-il,
+        "मानक स्थिति"@hi-in,
+        "規範的地位"@ja-jp,
+        "规范地位"@zh-cn,
+        "Positio iuridica"@la,
+        "Posizione giuridica"@it ;
+    skos:definition "A normative position is a relation between parties that a norm creates, such as a right and its correlative duty, a power and its correlative liability, or an immunity and its correlative disability, following Wesley Newcomb Hohfeld's jural relations." ;
+    skos:example "The faithful have the right to receive the spiritual goods of the Church from their sacred pastors (CIC c. 213), and the pastors have the corresponding duty.",
+        "A tenant's right to quiet enjoyment corresponds to the landlord's duty not to disturb it." ;
+    skos:note "Proposed 2026-11-08 by the Agents' Lawful Good gap registry (proposal deontic-completion-2026-11-08); the same local name is proposed to FOLIO so both ontologies stay aligned." .
+
+<R1Xlw46piQQyK0QeaoR8pI3> a owl:Class ;
+    rdfs:label "Normative Immunity" ;
+    rdfs:seeAlso <RCR7Z71r5mmHYFs1xoAWwzE> ;
+    rdfs:subClassOf <R2TPb1dgPO42w8tLZkDdqCP> ;
+    skos:altLabel "Hohfeldian Immunity",
+        "Jural Immunity",
+        "Normative Immunity"@en-gb,
+        "Inmunidad normativa"@es-es,
+        "Inmunidad normativa"@es-mx,
+        "Immunité normative"@fr-fr,
+        "Normative Immunität"@de-de,
+        "Imunidade normativa"@pt-br,
+        "חסינות נורמטיבית"@he-il,
+        "मानक उन्मुक्ति"@hi-in,
+        "規範的免除"@ja-jp,
+        "规范性豁免"@zh-cn,
+        "Immunitas"@la,
+        "Immunità"@it ;
+    skos:definition "An immunity is a normative position in which another party lacks the power to change the holder's rights, duties, or other legal or moral relations in a given respect. In Wesley Newcomb Hohfeld's scheme of jural relations, immunity is the correlative of disability and the opposite of liability." ;
+    skos:example "The First See is judged by no one (CIC c. 1404): no tribunal holds the power to judge the Roman Pontiff.",
+        "The Speech or Debate Clause gives members of Congress an immunity: for speech in either House, they shall not be questioned in any other place (U.S. Const. art. I, § 6, cl. 1).",
+        "A State's sovereign immunity means a private party lacks the power to subject the State to suit in federal court without its consent or a valid abrogation (U.S. Const. amend. XI)." ;
+    skos:note "Proposed 2026-11-08 by the Agents' Lawful Good gap registry (proposal deontic-completion-2026-11-08); the same local name is proposed to FOLIO so both ontologies stay aligned." .
+
+<R3p22AB0XXbb1kWWNeQWRDD> a owl:Class ;
+    rdfs:label "Norm Defeater" ;
+    rdfs:subClassOf <RClhbl4E1TJp9LygIXewIhn> ;
+    skos:altLabel "Defeater",
+        "Defeasibility Ground",
+        "Norm Defeater"@en-gb,
+        "Derrotante normativo"@es-es,
+        "Derrotante normativo"@es-mx,
+        "Cause d'inapplicabilité de la norme"@fr-fr,
+        "Normausschlussgrund"@de-de,
+        "Excludente normativa"@pt-br,
+        "סייג לנורמה"@he-il,
+        "मानक अपवर्जक कारण"@hi-in,
+        "規範の阻却事由"@ja-jp,
+        "规范阻却事由"@zh-cn,
+        "Causa defectibilitatis normae"@la,
+        "Causa di inapplicabilità della norma"@it ;
+    skos:definition "A norm defeater is a circumstance or act that keeps an otherwise applicable norm from producing a violation or its consequence, such as an exception, a justification, an excuse, a waiver, or a dispensation." ;
+    skos:example "A dispensation relaxes a merely ecclesiastical law in a particular case (CIC c. 85), so the law does not bind that person in that case.",
+        "A signed penetration-testing authorization defeats the \"without authorization\" element of a computer-access offense; a valid waiver defeats a notice requirement." ;
+    skos:note "Proposed 2026-11-08 by the Agents' Lawful Good gap registry (proposal deontic-completion-2026-11-08); the same local name is proposed to FOLIO so both ontologies stay aligned." .
+
+<R1zBn1lrGhO9ZNTlHKf0gB> a owl:Class ;
+    rdfs:label "Justification" ;
+    rdfs:seeAlso <RBAoFbSK8WP6xJyVrgQd5PZ> ;
+    rdfs:subClassOf <R3p22AB0XXbb1kWWNeQWRDD>,
+        <R7vJPxcT40MjEfNZkBK1tKH> ;
+    skos:altLabel "Justifying Circumstance",
+        "Justification Defense",
+        "Ground of Justification",
+        "Justification"@en-gb,
+        "Causa de justificación"@es-es,
+        "Causa de justificación"@es-mx,
+        "Fait justificatif"@fr-fr,
+        "Rechtfertigungsgrund"@de-de,
+        "Excludente de ilicitude"@pt-br,
+        "הצדק"@he-il,
+        "औचित्य"@hi-in,
+        "違法性阻却事由"@ja-jp,
+        "正当化事由"@zh-cn,
+        "Causa iustificans"@la,
+        "Causa di giustificazione"@it ;
+    skos:definition "A justification is a circumstance that makes conduct that would otherwise violate a norm right or permissible in the case at hand, so the conduct is not wrongful. A justification differs from an exception, under which the norm does not apply at all, and from an excuse, under which the conduct remains wrongful but the actor is not blameworthy." ;
+    skos:example "A person who acts in legitimate self-defense or defense of another against an unjust aggressor, with due moderation, is not subject to a penalty (CIC c. 1323, 5°).",
+        "Self-defense justifies the use of reasonable force against an imminent, unlawful attack.",
+        "The choice-of-evils defense justifies conduct that the actor believes necessary to avoid a greater harm (Model Penal Code § 3.02)." ;
+    skos:note "Proposed 2026-11-08 by the Agents' Lawful Good gap registry (proposal deontic-completion-2026-11-08); the same local name is proposed to FOLIO so both ontologies stay aligned." .
+
+<R2Cfmjnr5HGhJlZCMmlCyw0> a owl:Class ;
+    rdfs:label "Excuse" ;
+    rdfs:seeAlso <RDDmzFedWDpLN1Xtuy3FiLh>,
+        <RBAoFbSK8WP6xJyVrgQd5PZ> ;
+    rdfs:subClassOf <R3p22AB0XXbb1kWWNeQWRDD>,
+        <R7vJPxcT40MjEfNZkBK1tKH> ;
+    skos:altLabel "Excusing Condition",
+        "Excuse Defense",
+        "Ground of Excuse",
+        "Excuse"@en-gb,
+        "Causa de inculpabilidad"@es-es,
+        "Excluyente de culpabilidad"@es-mx,
+        "Cause de non-imputabilité"@fr-fr,
+        "Entschuldigungsgrund"@de-de,
+        "Excludente de culpabilidade"@pt-br,
+        "סייג לאשמה"@he-il,
+        "क्षमायोग्य परिस्थिति"@hi-in,
+        "責任阻却事由"@ja-jp,
+        "责任阻却事由"@zh-cn,
+        "Causa excusans"@la,
+        "Causa scusante"@it ;
+    skos:definition "An excuse is a circumstance under which conduct that violates a norm remains wrongful, but the actor is not blameworthy or not punishable for it because of the actor's capacity, knowledge, or freedom at the time." ;
+    skos:example "A person who had not completed the sixteenth year of age, who without negligence was ignorant of violating a law, or who acted from grave fear is not subject to a penalty (CIC c. 1323, 1°, 2°, 4°).",
+        "Duress may excuse a crime committed under a threat that a person of reasonable firmness could not have resisted (Model Penal Code § 2.09).",
+        "The insanity defense excuses a defendant who, because of mental disease or defect, lacked substantial capacity to appreciate the wrongfulness of the conduct (Model Penal Code § 4.01)." ;
+    skos:note "Proposed 2026-11-08 by the Agents' Lawful Good gap registry (proposal deontic-completion-2026-11-08); the same local name is proposed to FOLIO so both ontologies stay aligned." .
+
+<R3oECS9Y8el0TByDj3bapCz> a owl:Class ;
+    rdfs:label "Normative Outcome" ;
+    rdfs:subClassOf <RClhbl4E1TJp9LygIXewIhn> ;
+    skos:altLabel "Norm Evaluation Result",
+        "Deontic Outcome",
+        "Normative Outcome"@en-gb,
+        "Resultado normativo"@es-es,
+        "Resultado normativo"@es-mx,
+        "Résultat normatif"@fr-fr,
+        "Normatives Ergebnis"@de-de,
+        "Resultado normativo"@pt-br,
+        "תוצאה נורמטיבית"@he-il,
+        "मानक परिणाम"@hi-in,
+        "規範的評価結果"@ja-jp,
+        "规范评价结果"@zh-cn,
+        "Exitus normativus"@la,
+        "Esito normativo"@it ;
+    skos:definition "A normative outcome is the result of evaluating conduct against a norm: compliance, violation, or the consequence the norm attaches to either." ;
+    skos:example "An employer that gives 60 days' notice before a covered plant closing reaches compliance; one that gives none reaches violation and incurs back-pay liability." ;
+    skos:note "Proposed 2026-11-08 by the Agents' Lawful Good gap registry (proposal deontic-completion-2026-11-08); the same local name is proposed to FOLIO so both ontologies stay aligned." .
+
+<R3eE7scihp6mUkGxxTTmI6l> a owl:Class ;
+    rdfs:label "Normative Consequence" ;
+    rdfs:seeAlso <RsJ6DupkWKlUlCHH0Ycxvp>,
+        <R6DLuG3VglXIci9EJ3MwAK> ;
+    rdfs:subClassOf <R3oECS9Y8el0TByDj3bapCz> ;
+    skos:altLabel "Legal Consequence",
+        "Consequence of Violation",
+        "Norm Consequence",
+        "Normative Consequence"@en-gb,
+        "Consecuencia normativa"@es-es,
+        "Consecuencia normativa"@es-mx,
+        "Conséquence normative"@fr-fr,
+        "Rechtsfolge"@de-de,
+        "Consequência normativa"@pt-br,
+        "השלכה נורמטיבית"@he-il,
+        "विधिक परिणाम"@hi-in,
+        "規範的帰結"@ja-jp,
+        "规范后果"@zh-cn,
+        "Effectus iuridicus"@la,
+        "Conseguenza giuridica"@it ;
+    skos:definition "A normative consequence is the legal or moral result that a norm attaches to compliance with it or violation of it, such as a penalty, remedy, liability, sanction, reward, or change of status." ;
+    skos:example "Penal sanctions in the Church are medicinal penalties (censures), expiatory penalties, and penal remedies and penances (CIC c. 1312).",
+        "An employer that orders a plant closing or mass layoff in violation of the WARN Act is liable to each aggrieved employee for back pay and benefits for each day of the violation (29 U.S.C. § 2104(a)(1)).",
+        "A person who knowingly fails to register with the Selective Service faces criminal penalties (50 U.S.C. § 3811)." ;
+    skos:note "Proposed 2026-11-08 by the Agents' Lawful Good gap registry (proposal deontic-completion-2026-11-08); the same local name is proposed to FOLIO so both ontologies stay aligned." .
+
+<R30DEF9ukwQ52s1M0TM3rrK> a owl:Class ;
+    rdfs:label "Strong Permission" ;
+    rdfs:subClassOf <RCurUksxnjgPwYWpCSq0xPI> ;
+    skos:altLabel "Explicit Permission",
+        "Express Permission",
+        "Positive Permission",
+        "Strong Permission"@en-gb,
+        "Permiso fuerte"@es-es,
+        "Permiso fuerte"@es-mx,
+        "Permission forte"@fr-fr,
+        "Starke Erlaubnis"@de-de,
+        "Permissão forte"@pt-br,
+        "היתר מפורש"@he-il,
+        "स्पष्ट अनुमति"@hi-in,
+        "強い許可"@ja-jp,
+        "强许可"@zh-cn,
+        "Licentia"@la,
+        "Licenza"@it ;
+    skos:definition "A strong permission is an explicit grant by a competent authority that allows an action, such as a license, permit, consent, or authorization. A strong permission can override a prohibition that falls within the granting authority's competence." ;
+    skos:example "Without the permission of the local ordinary, no one may assist at certain marriages, such as a marriage of transients (CIC c. 1071 § 1, 1°); the ordinary's permission is a strong permission.",
+        "A building permit expressly authorizes construction that the local code would otherwise forbid." ;
+    skos:note "Proposed 2026-11-08 by the Agents' Lawful Good gap registry (proposal deontic-completion-2026-11-08); the same local name is proposed to FOLIO so both ontologies stay aligned." .
+
+<R19dUa6OpptxedDqxi9cMOC> a owl:Class ;
+    rdfs:label "Weak Permission" ;
+    rdfs:subClassOf <RCurUksxnjgPwYWpCSq0xPI> ;
+    skos:altLabel "Implicit Permission",
+        "Negative Permission",
+        "Residual Liberty",
+        "Weak Permission"@en-gb,
+        "Permiso débil"@es-es,
+        "Permiso débil"@es-mx,
+        "Permission faible"@fr-fr,
+        "Schwache Erlaubnis"@de-de,
+        "Permissão fraca"@pt-br,
+        "היתר משתמע"@he-il,
+        "निहित अनुमति"@hi-in,
+        "弱い許可"@ja-jp,
+        "弱许可"@zh-cn,
+        "Permesso implicito"@it ;
+    skos:definition "A weak permission is the permissibility of an action that follows only from the absence of any applicable prohibition, without any explicit grant. A weak permission cannot override an explicit prohibition." ;
+    skos:example "No statute forbids whistling on a public sidewalk, so a person may whistle there; nothing grants the permission, and nothing prohibits the act." ;
+    skos:note "Proposed 2026-11-08 by the Agents' Lawful Good gap registry (proposal deontic-completion-2026-11-08); the same local name is proposed to FOLIO so both ontologies stay aligned." .
+
+<RbR0g0g0FweCujfDBLnpLi> a owl:Class ;
+    rdfs:label "Canons of Construction" ;
+    rdfs:subClassOf <RDQC6BrYjcS3V0gZcYzqc8O> ;
+    skos:altLabel "Canons of Interpretation",
+        "Interpretive Canons",
+        "Maxims of Interpretation",
+        "Canons of Construction"@en-gb,
+        "Cánones de interpretación"@es-es,
+        "Cánones de interpretación"@es-mx,
+        "Règles d'interprétation"@fr-fr,
+        "Auslegungsregeln"@de-de,
+        "Cânones de interpretação"@pt-br,
+        "כללי פרשנות"@he-il,
+        "निर्वचन के सिद्धांत"@hi-in,
+        "解釈準則"@ja-jp,
+        "解释规则"@zh-cn,
+        "Regulae interpretationis"@la,
+        "Canoni di interpretazione"@it ;
+    skos:definition "Canons of construction are interpretive principles that courts and other interpreters use to determine the meaning of legal texts and to resolve conflicts between norms." ;
+    skos:example "Laws that establish a penalty, restrict the free exercise of rights, or contain an exception from the law are subject to strict interpretation (CIC c. 18).",
+        "The rule of lenity resolves a genuine ambiguity in a criminal statute in the defendant's favor.",
+        "Ejusdem generis reads a general word that follows a list of specific items as limited to things of the same kind." ;
+    skos:note "Proposed 2026-11-08 by the Agents' Lawful Good gap registry (proposal deontic-completion-2026-11-08); the same local name is proposed to FOLIO so both ontologies stay aligned." .
+
+<R1VeCUx7ApksL6aQiE1BjFN> a owl:Class ;
+    rdfs:label "Norm Priority" ;
+    rdfs:subClassOf <RbR0g0g0FweCujfDBLnpLi> ;
+    skos:altLabel "Priority Rule",
+        "Conflict-of-Norms Rule",
+        "Precedence Rule",
+        "Derogation Principle",
+        "Conflict-of-Norms Canon",
+        "Norm Priority"@en-gb,
+        "Prioridad normativa"@es-es,
+        "Prioridad normativa"@es-mx,
+        "Priorité normative"@fr-fr,
+        "Normkollisionsregel"@de-de,
+        "Critério de resolução de antinomias"@pt-br,
+        "עדיפות נורמטיבית"@he-il,
+        "मानक प्राथमिकता"@hi-in,
+        "規範の優先関係"@ja-jp,
+        "规范冲突规则"@zh-cn,
+        "Priorità normativa"@it ;
+    skos:definition "A norm priority is a rule for deciding which of two applicable, conflicting norms prevails, for example by the rank of the issuing authority, by specificity, or by time of enactment." ;
+    skos:example "A later law abrogates or derogates from an earlier law if it expressly so states, is directly contrary to it, or completely reorders its subject matter (CIC c. 20).",
+        "When a federal statute and a state statute conflict, lex superior gives the federal statute priority." ;
+    skos:note "Proposed 2026-11-08 by the Agents' Lawful Good gap registry (proposal deontic-completion-2026-11-08); the same local name is proposed to FOLIO so both ontologies stay aligned." .
+
+<R1mB8KZFWjVdadUCG6mTXeX> a owl:Class ;
+    rdfs:label "Lex Superior" ;
+    rdfs:subClassOf <R1VeCUx7ApksL6aQiE1BjFN> ;
+    skos:altLabel "Lex Superior Derogat Legi Inferiori",
+        "Hierarchy Principle",
+        "Principle of Hierarchy",
+        "Lex Superior"@en-gb,
+        "Principio de jerarquía normativa"@es-es,
+        "Principio de jerarquía normativa"@es-mx,
+        "Principe hiérarchique"@fr-fr,
+        "Lex-superior-Grundsatz"@de-de,
+        "Critério hierárquico"@pt-br,
+        "עקרון הנורמה העליונה"@he-il,
+        "उच्चतर विधि का सिद्धांत"@hi-in,
+        "上位法優先の原則"@ja-jp,
+        "上位法优于下位法"@zh-cn,
+        "Lex superior derogat legi inferiori"@la,
+        "Principio gerarchico"@it ;
+    skos:definition "Lex superior is the priority rule under which a norm issued by a higher authority prevails over a conflicting norm issued by a lower authority." ;
+    skos:example "A lower legislator cannot validly issue a law contrary to a higher law (CIC c. 135 § 2).",
+        "Under the Supremacy Clause, a valid federal statute prevails over a conflicting state law (U.S. Const. art. VI, cl. 2)." ;
+    skos:note "Proposed 2026-11-08 by the Agents' Lawful Good gap registry (proposal deontic-completion-2026-11-08); the same local name is proposed to FOLIO so both ontologies stay aligned." .
+
+<R3OGtuu1PDM3jR07sv9xc0N> a owl:Class ;
+    rdfs:label "Lex Specialis" ;
+    rdfs:subClassOf <R1VeCUx7ApksL6aQiE1BjFN> ;
+    skos:altLabel "Lex Specialis Derogat Legi Generali",
+        "Specificity Principle",
+        "General/Specific Canon",
+        "Lex Specialis"@en-gb,
+        "Principio de especialidad"@es-es,
+        "Principio de especialidad"@es-mx,
+        "Principe de spécialité"@fr-fr,
+        "Spezialitätsgrundsatz"@de-de,
+        "Critério da especialidade"@pt-br,
+        "עקרון הדין הספציפי"@he-il,
+        "विशेष विधि का सिद्धांत"@hi-in,
+        "特別法優先の原則"@ja-jp,
+        "特别法优于一般法"@zh-cn,
+        "Lex specialis derogat legi generali"@la,
+        "Principio di specialità"@it ;
+    skos:definition "Lex specialis is the priority rule under which a more specific norm prevails over a conflicting, more general norm on the matter the specific norm addresses." ;
+    skos:example "A universal law in no way derogates from a particular or special law unless the law expressly provides otherwise (CIC c. 20).",
+        "When a general permission and a specific prohibition conflict, the specific provision governs (RadLAX Gateway Hotel, LLC v. Amalgamated Bank, 566 U.S. 639, 645 (2012))." ;
+    skos:note "Proposed 2026-11-08 by the Agents' Lawful Good gap registry (proposal deontic-completion-2026-11-08); the same local name is proposed to FOLIO so both ontologies stay aligned." .
+
+<R2J1C02SzYxcRUGuN0V8gJ5> a owl:Class ;
+    rdfs:label "Lex Posterior" ;
+    rdfs:subClassOf <R1VeCUx7ApksL6aQiE1BjFN> ;
+    skos:altLabel "Lex Posterior Derogat Legi Priori",
+        "Chronological Principle",
+        "Later-in-Time Rule",
+        "Lex Posterior"@en-gb,
+        "Principio cronológico"@es-es,
+        "Principio cronológico"@es-mx,
+        "Principe chronologique"@fr-fr,
+        "Lex-posterior-Grundsatz"@de-de,
+        "Critério cronológico"@pt-br,
+        "עקרון הדין המאוחר"@he-il,
+        "पश्चात्वर्ती विधि का सिद्धांत"@hi-in,
+        "後法優先の原則"@ja-jp,
+        "新法优于旧法"@zh-cn,
+        "Lex posterior derogat legi priori"@la,
+        "Principio cronologico"@it ;
+    skos:definition "Lex posterior is the priority rule under which a later norm prevails over a conflicting, earlier norm of equal rank." ;
+    skos:example "A later law abrogates or derogates from an earlier law if it expressly so states, is directly contrary to it, or completely reorders its subject matter (CIC c. 20).",
+        "When two statutes irreconcilably conflict, the later-enacted statute controls, though courts disfavor finding an implied repeal (Posadas v. National City Bank, 296 U.S. 497, 503 (1936))." ;
+    skos:note "Proposed 2026-11-08 by the Agents' Lawful Good gap registry (proposal deontic-completion-2026-11-08); the same local name is proposed to FOLIO so both ontologies stay aligned." .
+
+<R9CBXdybYDztLBRNDNJl0W> a owl:Class ;
+    rdfs:label "Waiver" ;
+    rdfs:subClassOf <R3p22AB0XXbb1kWWNeQWRDD> ;
+    skos:altLabel "Renunciation",
+        "Relinquishment of Right",
+        "Waiver"@en-gb,
+        "Renuncia"@es-es,
+        "Renuncia"@es-mx,
+        "Renonciation"@fr-fr,
+        "Verzicht"@de-de,
+        "Renúncia"@pt-br,
+        "ויתור"@he-il,
+        "अधित्याग"@hi-in,
+        "権利放棄"@ja-jp,
+        "弃权"@zh-cn,
+        "Renuntiatio"@la,
+        "Rinuncia"@it ;
+    skos:definition "A waiver is a voluntary relinquishment or surrender of some known right, claim, or privilege, often documented in a formal, written statement. A waiver is usually prospective (forward-looking), where a release is usually retrospective (backward-looking)." ;
+    skos:example "A party can renounce the instance at any stage and grade of a trial (CIC c. 1524 § 1)." ;
+    skos:note "Proposed 2026-11-08 by the Agents' Lawful Good gap registry (proposal deontic-completion-2026-11-08); the same local name is proposed to FOLIO so both ontologies stay aligned." .
+
+<R2mVIpzkOdrbXKdRD71wKYs> a owl:Class ;
+    rdfs:label "Dispensation" ;
+    rdfs:subClassOf <RCdJXw1Ml7DIBqmouWarZm2> ;
+    skos:altLabel "Canonical Dispensation",
+        "Relaxation of Law",
+        "Dispensation"@en-gb,
+        "Dispensa"@es-es,
+        "Dispensa"@es-mx,
+        "Dispense"@fr-fr,
+        "Dispens"@de-de,
+        "Dispensa"@pt-br,
+        "היתר מיוחד (דיספנסציה)"@he-il,
+        "विशेष छूट (डिस्पेंसेशन)"@hi-in,
+        "免除（教会法）"@ja-jp,
+        "豁免（教会法）"@zh-cn,
+        "Dispensatio"@la,
+        "Dispensa"@it ;
+    skos:definition "A dispensation is the relaxation of a merely ecclesiastical law in a particular case, granted by those who have executive power within the limits of their competence, or by those to whom the law grants the power to dispense (CIC c. 85)." ;
+    skos:example "The diocesan bishop can dispense the faithful from universal and particular disciplinary laws whenever he judges that it contributes to their spiritual good (CIC c. 87 § 1)." ;
+    skos:note "Proposed 2026-11-08 by the Agents' Lawful Good gap registry (proposal deontic-completion-2026-11-08); the same local name is proposed to FOLIO so both ontologies stay aligned." .
+
+# Added parents for existing classes (14): H-add only; retain every existing parent.
+
+# Obligation
+<RDtFkLR3v97fran5zQ3ugao> rdfs:subClassOf <R2PCCd0Cf7TiP6IxGyrz7Ta> .
+
+# Prohibition
+<RCqqI0SLTxsE8Z2rCu7KOXm> rdfs:subClassOf <R2PCCd0Cf7TiP6IxGyrz7Ta> .
+
+# Permission
+<RCurUksxnjgPwYWpCSq0xPI> rdfs:subClassOf <R2PCCd0Cf7TiP6IxGyrz7Ta> .
+
+# Right
+<RmCCZU8GS7O8920pkDipw7> rdfs:subClassOf <R2TPb1dgPO42w8tLZkDdqCP> .
+
+# Authority
+<R9ikrznaQwm4RUsMzP9KXFR> rdfs:subClassOf <R2TPb1dgPO42w8tLZkDdqCP> .
+
+# Exception
+<RCdJXw1Ml7DIBqmouWarZm2> rdfs:subClassOf <R3p22AB0XXbb1kWWNeQWRDD> .
+
+# Compliance
+<RCZwssbqfmu0Lds0LPDV34F> rdfs:subClassOf <R3oECS9Y8el0TByDj3bapCz> .
+
+# Violation
+<RDsDXHKUsZoJfz87jnz7zjj> rdfs:subClassOf <R3oECS9Y8el0TByDj3bapCz> .
+
+# Self-Defense
+<RDLANHrFj8nfaiNIalX9Ndx> rdfs:subClassOf <R1zBn1lrGhO9ZNTlHKf0gB> .
+
+# Necessity of Trespass
+<RbmgMZH2v4CykER8m2CutA> rdfs:subClassOf <R1zBn1lrGhO9ZNTlHKf0gB> .
+
+# Duress
+<RDDmzFedWDpLN1Xtuy3FiLh> rdfs:subClassOf <R2Cfmjnr5HGhJlZCMmlCyw0> .
+
+# Insanity Defense
+<Rss8FJTgnn6V9FuSLxl90u> rdfs:subClassOf <R2Cfmjnr5HGhJlZCMmlCyw0> .
+
+# Involuntary Intoxication
+<R84WSMY4efMvESQh729h2Kp> rdfs:subClassOf <R2Cfmjnr5HGhJlZCMmlCyw0> .
+
+# Lack of Capacity
+<R9kRdeC3m6NEz0zOxotAueb> rdfs:subClassOf <R2Cfmjnr5HGhJlZCMmlCyw0> .
+
+# Additions to an existing class: Condition translations only.
+# Skip languages already present in the Canon; retain its labels, definition, examples, and parents.
+
+<R8nMXQ6k46QexNTIdUvvr4k> skos:altLabel "Condition"@en-gb,
+        "Condición"@es-es,
+        "Condición"@es-mx,
+        "Condition"@fr-fr,
+        "Bedingung"@de-de,
+        "Condição"@pt-br,
+        "תנאי"@he-il,
+        "पूर्वशर्त"@hi-in,
+        "条件"@ja-jp,
+        "条件"@zh-cn,
+        "Condicio"@la,
+        "Condizione"@it .
